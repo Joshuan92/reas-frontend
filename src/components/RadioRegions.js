@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
 import czechRegions from "../data/czechRegions";
 
 const RadioRegions = () => {
+  const [region, setRegion] = useState("");
+
+  console.log(region);
+
+  const renderRegion = (region, index) => (
+    <div className="form-check form-check radio-input" key={index}>
+      <input
+        className="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id={`inlineRadion${index}`}
+        value={region.title}
+      />
+      <label className="form-check-label" htmlFor={`inlineRadion${index}`}>
+        <h6>{region.title}</h6>
+      </label>
+    </div>
+  );
+
   return (
     <>
-      <section className="container">
-        {czechRegions.map((region, index) => (
-          <div class="form-check form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="inlineRadioOptions"
-              id="inlineRadio1"
-              value="option1"
-            />
-            <label class="form-check-label" for="inlineRadio1">
-              {region.title}
-            </label>
-          </div>
-        ))}
+      <section className="radio-section">
+        {czechRegions.map(renderRegion)}
       </section>
     </>
   );

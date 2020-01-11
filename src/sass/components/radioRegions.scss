@@ -1,0 +1,24 @@
+.radio-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.radio-input {
+  margin-left: 25%;
+}
+
+@media screen and (max-width: 400px) {
+  .radio-input {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .radio-section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .radio-input {
+    margin-left: 15%;
+  }
+}

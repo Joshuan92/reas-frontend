@@ -130,7 +130,7 @@ const czechRegions = [
   },
   {
     index: 14,
-    title: "Zlinský",
+    title: "Zlínský",
     counties: ["Kroměříž", "Uherské Hradiště", "Vsetín", "Zlín"]
   }
 ];
