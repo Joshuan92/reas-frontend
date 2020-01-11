@@ -1,7 +1,16 @@
+//buttons styling
+@import "./basic/radioButton.scss";
+
+//components
 @import "./components/radioRegions.scss";
+@import "./components/radioCounties.scss";
 
 body {
   box-sizing: border-box;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
+}
+
+.logo {
+  max-width: 75px;
 }

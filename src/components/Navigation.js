@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     <section id="nav-bar">
       <Navbar color="light" light expand="md" className="mb-3">
-        Flight with us
+        <img className="logo" src="./img/reasLogo.png" alt="reas logo"></img>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>

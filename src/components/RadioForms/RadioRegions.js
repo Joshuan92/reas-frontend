@@ -21,15 +21,19 @@ const RadioRegions = () => {
 
   const renderRegion = (region, index) => (
     <div className="form-check form-check radio-input" key={index}>
-      <input
-        className="form-check-input"
-        type="radio"
-        name="inlineRadioOptions"
-        id={`${index}`}
-        value={region.title}
-        onClick={onRadioClick}
-      />
-      <label className="form-check-label" htmlFor={`${index}`}>
+      <label
+        className="form-check-label styled-radio-button"
+        htmlFor={`${index}`}
+      >
+        <input
+          className="form-check-input"
+          type="radio"
+          name="radioRegions"
+          id={`${index}`}
+          value={region.title}
+          onClick={onRadioClick}
+        />
+        <span className="checkmark"></span>
         <h6>{region.title}</h6>
       </label>
     </div>
@@ -39,10 +43,7 @@ const RadioRegions = () => {
 
   if (region.index != null) {
     content = (
-      <RadioCounties
-        chosenRegion={region}
-        chosenCounties={czechRegions[region.index].counties}
-      />
+      <RadioCounties chosenCounties={czechRegions[region.index].counties} />
     );
   }
 
@@ -54,8 +55,8 @@ const RadioRegions = () => {
       </div>
       <section className="radio-section">
         {czechRegions.map(renderRegion)}
-        {content}
       </section>
+      {content}
     </>
   );
 };
