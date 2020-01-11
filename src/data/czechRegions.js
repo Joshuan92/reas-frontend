@@ -1,6 +1,6 @@
 const czechRegions = [
   {
-    index: 1,
+    index: 0,
     title: "Středočeský",
     counties: [
       "Benešov",
@@ -18,12 +18,12 @@ const czechRegions = [
     ]
   },
   {
-    index: 2,
+    index: 1,
     title: "Praha",
     counties: ["Praha"]
   },
   {
-    index: 3,
+    index: 2,
     title: "Jihočeský",
     counties: [
       "České Budějovice",
@@ -36,7 +36,7 @@ const czechRegions = [
     ]
   },
   {
-    index: 4,
+    index: 3,
     title: "Plzeňský",
     counties: [
       "Domažlice",
@@ -49,12 +49,12 @@ const czechRegions = [
     ]
   },
   {
-    index: 5,
+    index: 4,
     title: "Karlovarský",
     counties: ["Cheb", "Karlovy Vary", "Sokolov"]
   },
   {
-    index: 6,
+    index: 5,
     title: "Ústecký",
     counties: [
       "Děčín",
@@ -67,12 +67,12 @@ const czechRegions = [
     ]
   },
   {
-    index: 7,
+    index: 6,
     title: "Liberecký",
     counties: ["Česká Lípa", "Jablonec nad Nisou", "Liberec", "Semily"]
   },
   {
-    index: 8,
+    index: 7,
     title: "Královéhradecký",
     counties: [
       "Hradec Králové",
@@ -83,12 +83,12 @@ const czechRegions = [
     ]
   },
   {
-    index: 9,
+    index: 8,
     title: "Pardubický",
     counties: ["Chrudim", "Pardubice", "Svitavy", "Ústí nad Orlicí"]
   },
   {
-    index: 10,
+    index: 9,
     title: "Vysočina",
     counties: [
       "Havlíčkův Brod",
@@ -99,12 +99,12 @@ const czechRegions = [
     ]
   },
   {
-    index: 11,
+    index: 10,
     title: "Olomoucký",
     counties: ["Jeseník", "Olomouc", "Prostějov", "Přerov", "Šumperk"]
   },
   {
-    index: 12,
+    index: 11,
     title: "Moravskoslezský",
     counties: [
       "Bruntál",
@@ -116,7 +116,7 @@ const czechRegions = [
     ]
   },
   {
-    index: 13,
+    index: 12,
     title: "Jihomoravský",
     counties: [
       "Blansko",
@@ -129,7 +129,7 @@ const czechRegions = [
     ]
   },
   {
-    index: 14,
+    index: 13,
     title: "Zlínský",
     counties: ["Kroměříž", "Uherské Hradiště", "Vsetín", "Zlín"]
   }
