@@ -1,22 +1,34 @@
 import React from "react";
 
+import NextButton from "../buttons/NextButton";
+
 const RadioCounties = props => {
-  const { chosenCounties } = props;
-  console.log(props);
+  const { chosenCounties, regionCounty, setRegionCounty } = props;
+
+  const onRadioClick = e => {
+    const county = e.target.value;
+    setRegionCounty(prevValues => {
+      return {
+        ...prevValues,
+        county
+      };
+    });
+  };
 
   const renderCounty = county => {
     return (
-      <div className="form-check radio-input">
+      <div className="form-check radio-input" key={county}>
         <label
           className="form-check-label styled-radio-button"
           htmlFor={county}
         >
           <input
-            className="form-check-input "
+            className="form-check-input"
             type="radio"
             id={county}
             name="radioCounties"
             value={county}
+            onClick={onRadioClick}
           />
           <span className="checkmark"></span>
           <h6>{county}</h6>
@@ -24,6 +36,11 @@ const RadioCounties = props => {
       </div>
     );
   };
+
+  let button = "";
+  if (regionCounty.county !== null) {
+    button = <NextButton />;
+  }
 
   return (
     <>
@@ -33,6 +50,7 @@ const RadioCounties = props => {
       <section className="radio-section">
         {chosenCounties.map(renderCounty)}
       </section>
+      {button}
     </>
   );
 };

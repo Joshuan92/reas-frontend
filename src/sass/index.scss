@@ -1,9 +1,10 @@
 //buttons styling
 @import "./basic/radioButton.scss";
+@import "./basic/nextButton.scss";
 
 //components
-@import "./components/radioRegions.scss";
-@import "./components/radioCounties.scss";
+@import "./components/radioGroups.scss";
+@import "./components/navbar.scss";
 
 body {
   box-sizing: border-box;

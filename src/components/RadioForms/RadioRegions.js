@@ -5,16 +5,21 @@ import RadioCounties from "./RadioCounties";
 import czechRegions from "../../data/czechRegions";
 
 const RadioRegions = () => {
-  const [region, setRegion] = useState({ region: "", index: null });
+  const [regionCounty, setRegionCounty] = useState({
+    index: null,
+    region: null,
+    county: null
+  });
 
   const onRadioClick = e => {
     const region = e.target.value;
     const index = e.target.id;
-    setRegion(prevValues => {
+    setRegionCounty(prevValues => {
       return {
         ...prevValues,
         index,
-        region
+        region,
+        county: null
       };
     });
   };
@@ -41,9 +46,13 @@ const RadioRegions = () => {
 
   let content = "";
 
-  if (region.index != null) {
+  if (regionCounty.index != null) {
     content = (
-      <RadioCounties chosenCounties={czechRegions[region.index].counties} />
+      <RadioCounties
+        chosenCounties={czechRegions[regionCounty.index].counties}
+        regionCounty={regionCounty}
+        setRegionCounty={setRegionCounty}
+      />
     );
   }
 

@@ -1,0 +1,23 @@
+.next-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.next-button {
+  display: inline-block;
+  transition: all ease-in-out 200ms;
+  line-height: 1;
+  border-radius: 8px;
+  color: #ffffff;
+  border: none;
+  background-size: 200%;
+  background-color: #3294fe;
+  background-position: 100%;
+  height: 40px;
+  padding: 13px 20px;
+  margin: 10px 0px;
+}
+
+.next-button:hover {
+  background-color: #1559b3;
+}
